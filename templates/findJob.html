@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; }
+        .job-search { margin: 20px 0; }
+        .job-list { margin: 20px 0; }
+        .job-item { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Finder</h1>
+        <div class="job-search">
+            <label for="job_title">Job Title:</label>
+            <input type="text" id="job_title" name="job_title">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company">
+            <button id="search_button">Search</button>
+        </div>
+        <div class="job-list" id="job_list">
+            <!-- Job items will be inserted here -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='findJob.js') }}"></script>
+</body>
+</html>
